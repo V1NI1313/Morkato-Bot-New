@@ -45,7 +45,7 @@ app.post("/desktop/Guilds/:id", (req, res) => {
   }
 })
 app.patch("/desktop/Guilds/:id", (req, res) => {
-  // try {
+  try {
     let Guild = fs.readFileSync(`${drr}/Guilds/${req.params.id}.json`)
     Guild = JSON.parse(Guild.toString())
     let response = req.body
@@ -77,9 +77,9 @@ app.patch("/desktop/Guilds/:id", (req, res) => {
     fs.writeFileSync(`${drr}/Guilds/${fileName}`, JSON.stringify(response, null, 2))
     res.status(200)
     res.json(response)
-    // } catch {
-    //   res.status(402)
-    //   res.json({"message": "GuildNotExists", "status": "402"})
-    // }
+    } catch {
+      res.status(402)
+      res.json({"message": "GuildNotExists", "status": "402"})
+    }
 })
 app.listen(5500, () => console.log("Server running..."))
