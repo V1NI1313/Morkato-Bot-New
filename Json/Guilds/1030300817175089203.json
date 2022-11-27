@@ -1,0 +1,31 @@
+{
+  "roles": {
+    "human": 1031641341198864400,
+    "oni": 1031641613883146200,
+    "hybrid": 1038826253467263000
+  },
+  "player": {
+    "PlayerFormat": "{nick} {year} |❤️{life}|{err}{stamina}",
+    "defaultStatus": {
+      "human": {
+        "life": 3000,
+        "stamina": 3000
+      },
+      "oni": {
+        "life": 6000,
+        "stamina": 6000
+      },
+      "hybrid": {
+        "life": 3000,
+        "stamina": 6000
+      }
+    },
+    "rolls": {
+      "family": 3,
+      "hability": 5
+    }
+  },
+  "config": {
+    "playerBreed": 0
+  }
+}
