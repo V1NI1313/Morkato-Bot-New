@@ -1,7 +1,10 @@
-from typing import (Optional, Union, Any)
+from typing import (Optional, Generic, TypeVar, Union, Any)
+from typing_extensions import Self
 import requests
 import json
+import re
 
+T = TypeVar('T')
 class Route:
   url: str = "http://localhost:5500"
   
@@ -28,11 +31,11 @@ class Route:
         "content-type": "application/json"
       }
     )
-    _data = (
-      data
-      if not isinstance(data, dict)
-      else json.dumps(data)
-    )
+    if isinstance(data, dict):
+      for i in data:
+        data[i] = (str(data[i]) if isinstance(data[i], int) else data[i])
+      data = json.dumps(data)
+    _data = data
     return requests.post(url, data=_data, headers=_headers)
   @classmethod
   def patch(
@@ -49,11 +52,44 @@ class Route:
         "content-type": "application/json"
       }
     )
-    _data = (
-      data
-      if not isinstance(data, dict)
-      else json.dumps(data)
-    )
+    if isinstance(data, dict):
+      for i in data:
+        data[i] = (str(data[i]) if isinstance(data[i], int) else data[i])
+      data = json.dumps(data)
+    _data = data
     return requests.patch(url, data=_data, headers=_headers)
-    
-    
+  @classmethod
+  def delete(
+    cls,
+    local: str
+  ) -> requests.Response:
+    url = f"{cls.url}{f'/{local}' if not local[0]=='/' else local}"
+    return requests.delete(url)
+def getAll(array: list, obj: object) -> list:
+  return [i for i in array if i == obj]
+class Decimals(Generic[T]):
+  def __init__(self, num: T) -> None:
+    self.value: T = num
+  def __repr__(self) -> str:
+    return str(self.value)
+  def __add__(self, n: T) -> Generic[T]:
+    return Decimals(self.value+n)
+  def normalize(self) -> Self:
+    if isinstance(self.value, int):
+      return Decimals(self.value)
+    normalized = round(self.value, 2)
+    normalized = str(normalized).strip('0').strip('.')
+    return Decimals(eval(normalized))
+  def parseInt(self) -> Self:
+    return Decimals(round(self.value))
+  def normalizeString(self) -> str:
+    if isinstance(self.value, float):
+      value = self.normalize()
+    else:
+      value = self.value
+    if value < 1000:
+      return value
+    elif value >= 1000 and value < 1000000:
+      value = str(Decimals(value/1000).normalize()).strip('0').strip('.')
+      return f"{value}k"
+  

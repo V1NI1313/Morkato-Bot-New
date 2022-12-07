@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "info": {
+      "name": "tesr",
+      "id": 40882360048153,
+      "role": null,
+      "habilitys": [],
+      "roles": [],
+      "rarity": 0,
+      "require": 1,
+      "limit": null
+    },
+    "content": {
+      "title": null,
+      "description": null
+    },
+    "message": {
+      "content": null,
+      "fileDecoder": 0,
+      "file": null
+    }
+  }
+]

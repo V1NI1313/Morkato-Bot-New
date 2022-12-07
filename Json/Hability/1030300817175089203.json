@@ -1,1 +1,821 @@
-[]
+[
+  {
+    "name": "paciencia-eterna",
+    "id": "75698462589129",
+    "role": "1032474435871064185",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 1,
+    "require": 1,
+    "embed": {
+      "title": "Paciência eterna",
+      "description": "**▸ 『👶』 ${title} - `Apresentada por Kanao Tsugari, essa habilidade consiste ao usuário poder ter uma paciência onde será \"impossível\" irritá-lo.`\n\n -  Buffs: `Poderá ter 2 desvios certeiros à cada luta`**",
+      "url": "https://media.tenor.com/7e6Bkp-KCM4AAAAd/kanao.gif"
+    }
+  },
+  {
+    "name": "furia-eterna",
+    "id": "53389889170995",
+    "role": "1032474437041266709",
+    "roles": [
+      1031641341198864400,
+      1032327680558903400
+    ],
+    "rarity": 0,
+    "require": 2,
+    "embed": {
+      "title": "Fúria eterna",
+      "description": "**▸ 『🤬』 ${title} - `Essa habilidade é apresentado por Tanjiro Kamado onde o tal portador pode ficar com uma fúria imensa do seu oponente. Ele pode dar o triplo de dano, porém, perde duas vezes mais fôlego.`\n\n- Buffs: `Aumenta em 3x o dano, e usa 2x a mais de fôlego.`\n- Limite: `Só pode ser usado quando seu personagem tá com raiva.`**",
+      "url": "https://media.tenor.com/XYJuMWfGC9gAAAAd/demon-slayer-tanjiro.gif"
+    }
+  },
+  {
+    "name": "estado-autuista",
+    "id": "97076460061365",
+    "role": "1032474439360729239",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 3,
+    "require": 1,
+    "embed": {
+      "title": "Estato autruísta",
+      "description": "**▸ 『🌱』 ${title} - `Apresentado por Tanjuro Kamado. Essa habilidade consiste ao usuário poder deixar seus oponentes totalmente sem espírito de luta, parecendo uma planta sem vontade de matar.`\n\n - Buffs: `Deixando seu oponente(s) sem espírito de luta, você poderá ter 4 desvios certeiros e todos seus ataques terão 2x a mais de dano e seus ataques. serão indefensáveis e indesviáveis.`\n - N/Buffs: `Pessoas sem concentração total gastão 2x mais fôlego.`**",
+      "url": "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/1a/Tanjiro%27s_plant-like_presence.png/revision/latest/scale-to-width-down/300?cb=20210817133643"
+    }
+  },
+  {
+    "name": "fio-de-abertura",
+    "id": "892012677139",
+    "role": "1032474440962953216",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Fio de abertura",
+      "description": "**▸ 『👁️』 ${title} - `Essa habilidade é apresentada por Tanjiro Kamado onde o tal portador poderá acertar os orgãos de seu oponente mais facilmente.`\n\n- Buffs: `Poderá acertar pontos específicos do corpo de seu oponente mais facilmente, diminuirá 2 no roll de desvio.`**",
+      "url": "https://cdn.discordapp.com/attachments/971804709402865755/971829078330056774/unknown.png"
+    }
+  },
+  {
+    "name": "ecolocalizacao",
+    "id": "74357143258088",
+    "role": "1032474442347061321",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 1,
+    "require": 1,
+    "embed": {
+      "title": "Ecolocalização",
+      "description": "**▸ 『🎵』 ${title} - `Essa habilidade é apresentada por Tengen Uzui onde seu portador poderá escutar tudo que acontece em sua volta, como Uzui em sua missão, onde ele localizou suas esposas pelo som.`\n\n- Buffs: `Poderá escutar uma categoria inteira.`**",
+      "url": "https://media.tenor.com/0H1-m9euId8AAAAC/uzui-hashira.gif"
+    }
+  },
+  {
+    "name": "combate-desacordado",
+    "id": "72149753787091",
+    "role": "1032474444838490175",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Combate dascordado",
+      "description": "**▸ 『😴』 ${title} - `Essa habilidade é apresentada por Zenitsu Agatsuma onde o tal portador poderá lutar enquanto estiver dormindo. `\n\n- Buffs: `Poderá lutar dormindo.`**",
+      "url": "https://media.tenor.com/MNtqvOEE5Z0AAAAC/zenitsu-zenitsu-agatsuma.gif"
+    }
+  },
+  {
+    "name": "empunhadura-dupla",
+    "id": "85994158442827",
+    "role": "1032474446692364358",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Empunhadura dupla",
+      "description": "**▸ 『⚔️』 ${title} - `Essa habilidade é apresentada por Tengen Uzui e Inosuke Hashiibira, onde seu portador poderá usar duas nichirins ao mesmo tempo`\n\n- Buffs: `Será ambidestro.`**",
+      "url": "https://media.tenor.com/zNZWS92PmgcAAAAd/tengen-uzui-gyutaro.gif"
+    }
+  },
+  {
+    "name": "sangue-merichi",
+    "id": "88793927797632",
+    "role": "1032474447749320785",
+    "roles": [
+      1032327693154398200,
+      1031641341198864400
+    ],
+    "rarity": 2,
+    "require": 1,
+    "embed": {
+      "title": "Sangue merichi",
+      "description": "**▸ 『🩸』 ${title} - `Apresentada por Sanemi Shanazugawa. Essa habilidade consiste ao usuário ter um sangue venoso para onis.`\n\n - Buffs: `Ao se ferir. O usuário deixará o Oni meio tonto sendo possível desviar de ataques mais facilmente. 2d(x) no roll de desvio, -2 no roll de desvio do Oni.`\n - Exclusividade: `Família Shinazugawa.`**",
+      "url": "https://media.tenor.com/AdjFSGdK2HEAAAAd/sanemi-kny.gif"
+    }
+  },
+  {
+    "name": "paladar-demoniaco",
+    "id": "84174059708047",
+    "role": "1032474449376727060",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 2,
+    "require": 1,
+    "embed": {
+      "title": "Paladar demoníaco",
+      "description": "**▸ 『👹』 ${title} - `Apresentada por Genya. Essa habilidade consiste ao usuário comer carne de oni e tomar suas habilidades por um curto período de tempo. Como Genya em sua luta contra o Kokoshibo, onde foi capaz de comer a carne do Kokoshibo e pegar suas habilidades.`\n\n - Buffs: `Ao comer uma carne de oni, você pegará todas as suas habilidades por um curto período de tempo, e ganhará 5% do status do Oni.`**",
+      "url": "https://media.tenor.com/n1KEox-bW3oAAAAC/grnya.gif"
+    }
+  },
+  {
+    "name": "carmesim",
+    "id": "83644007242997",
+    "role": "1032474450425303040",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 2,
+    "require": 1,
+    "embed": {
+      "description": "**▸ 『🟥』 ${title} - `Essa habilidade é apresentada por Youriichi onde o tal portador pode transformar sua nichirin em um vermelho carmesim, dificultando a vida dos onis.`\n\n- Buffs: `O Oni acertado nn poderá se regenerar por 2 turnos. Caso você for Tsugikuni, o Oni nn poderá se regenerar à batalha inteira e seus ataques darão 2x mais dano.`**",
+      "url": "https://cdn.discordapp.com/attachments/1030309862808231966/1032960399957561464/carmesim.gif",
+      "title": null
+    }
+  },
+  {
+    "name": "orgulho-inquebravel",
+    "id": "65841801921980",
+    "role": "1032474452849598564",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 3,
+    "require": 1,
+    "embed": {
+      "title": "Orgulho inquebrável",
+      "description": "**▸ 『🤬』 ${title} - `Apresenta por Rengoku. Essa habilidade consiste à seu usuário ter um orgulho inquebrável. Como Rengoku, em sua luta com Akaza ele foi capaz de lutar mesmo \"morto\".`\n\n - Buffs: `Quando sua vida zerar, será capaz de lutar por 2 turnos.`\n - OBS: `A cada rank que você sobe aumenta os turnos. Exemplo, sou Mizunoto e tenho 3 turnos quando minha vida zerar.`**",
+      "url": "https://media.tenor.com/OS9O6vV_2OMAAAAd/rengoku.gif"
+    }
+  },
+  {
+    "name": "durabilidade-imensa",
+    "id": "95023436002573",
+    "role": "1032474453847838813",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 2,
+    "require": 1,
+    "embed": {
+      "title": "Durabilidade imensa",
+      "description": "**▸ 『👺』 ${title} - `Essa habilidade é apresentada por Giyu Tomioka e Gyomei Himejima, onde seu portador poderá ter uma durabilidade comparada a de um Oni.`\n\n- Buffs: `Terá 2d(x) na defesa, e todos os ataque terão menos 20% do dano total`**",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqiFGZpbLRkblx5w3LXfGKRfmdHlhE2FJZGqm2W-ybcvt1_-kHUp-0V3GgSIStL8oz7vE&usqp=CAU"
+    }
+  },
+  {
+    "name": "mao-suporte",
+    "id": "66965853452355",
+    "role": "1032477237041188914",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 2,
+    "require": 1,
+    "embed": {
+      "title": "Mão suporte",
+      "description": "**▸ 『🤚』 ${title} - `Essa habilidade é apresentada por Shinobu Kocho, onde seu portador poderá curar seus amigos/players com seringas quase que instantaneamente.`\n\n- Buffs: `Poderá curar seus aliados instantaneamente.`\n - N/Buffs: `Gastará 10k de sua vida e 15k de seu fôlego.`**",
+      "url": "https://media.tenor.com/wiUXqU0k1AgAAAAC/shinobu-kocho.gif"
+    }
+  },
+  {
+    "name": "sentidos-apurados",
+    "id": "42678406342320",
+    "role": "1032477238152675468",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 3,
+    "require": 1,
+    "embed": {
+      "title": "Sentidos apurados",
+      "description": "**▸ 『👁️ 』 ${title} - `Apresentada por Youriichi Tsugikuni. Essa habilidade consiste ao usuário poder ter todas os seus sentidos apurados.`\n\n - Buffs: `Terá todos os sentidos apurados.`**",
+      "url": "https://media.tenor.com/QJa4MXV7JgIAAAAC/demon-slayer-yoriichi-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "partitura",
+    "id": "51224687930876",
+    "role": "1032477239209631836",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 3,
+    "require": 1,
+    "embed": {
+      "title": "Partitura",
+      "description": "**▸ 『🔊』 ${title} - `Apresentada por Tengen Uzui. Essa habilidade consiste ao usuário poder ler todos seus movimentos a partir do som. Como Uzui em sua batalha contra Gyutaro, onde foi capaz de ler completamente os movimentos do Gyuotaro, assim sendo capaz de planejar onde ele estaria.`\n\n - Buffs: `Terá 2d(x) no roll de desvio. Depois de ter desviado por 15 turnos, será capaz de desviar até de ataques indesviáveis. Depois de 30 turnos, você desviará de todos os ataques de seu oponente.`\n - Exclusividade: `Família Uzui, Audição apurada ou ter a respiração do som.`**",
+      "url": "https://64.media.tumblr.com/060be06ddb6e69fc2843c19a1fe00303/d5abef368c1aa236-5b/s540x810/2ab30368dd6c688cc8d061b0e24707b8194f4c3d.gif"
+    }
+  },
+  {
+    "name": "resistencia-imensa",
+    "id": "72980693947456",
+    "role": "1032477240321118228",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 1,
+    "require": 1,
+    "embed": {
+      "title": "Resistência imensa",
+      "description": "**▸ 『🛡️』 ${title} - `Apresentada por Muichiro Tokito e Tanjiro Kamado. Essa habilidade consiste ao usuário ter uma resistência incomum. Como Tanjiro em sua luta contra Daki e Gyutaro, onde sendo capaz de lutar sem seu fôlego acabar.`\n\n - Buffs: `Gastará -20% de seu fôlego à cada ataque.`**",
+      "url": "https://media.tenor.com/7tMzgu5a48IAAAAd/tanjiro-kimetsu-no-yaiba.gif"
+    }
+  },
+  {
+    "name": "prodigio",
+    "id": "22248077439622",
+    "role": "1032474451410944062",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Prodígio",
+      "description": "**▸ 『🏅』 ${title} - `Essa habilidade é apresentada pelo hashira da névoa (Muichiro Tokito) onde o tal portador consegue aprender as técnicas/respirações mais rápido, quase a metade do tempo.`\n\n- Buffs: `Diminui a metade do tempo para aprender algo.`**",
+      "url": "https://media.tenor.com/40crhrLz9rQAAAAC/muichiro-tokito-muichiro.gif"
+    }
+  },
+  {
+    "name": "acoes-repetitivas",
+    "id": "13411040625475",
+    "role": "1032974238065373204",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 1,
+    "require": 1,
+    "embed": {
+      "title": "Ações repetitivas",
+      "description": "**▸ 『🔁』 ${title} - `Essa habilidade é apresentada por Genya, consite ao usuário dar 2 ataques em um turno`\n\n - Buffs: `Poderá fazer 2 turnos em 1.`\n - Limite: `2 vezes por batalha.`**",
+      "url": "https://media.tenor.com/mwgi7pmN8sUAAAAC/genya-shinazugawa-fight.gif"
+    }
+  },
+  {
+    "name": "voz-calma",
+    "id": "70368071576724",
+    "role": "1033117923088269433",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Voz calma",
+      "description": "**▸ 『🗣️』 ${title} - `Essa habilidade é apresentada por Ubuyashiki onde o tal portador pode deixar os outros personagem mais à vontade.`\n\n- Buffs: `2 de Stun caso a pessoa não te conheça.`\n- Limite: `Só pode ser usado uma vez por batalha.`**",
+      "url": "https://media.tenor.com/TcTy_2TqTukAAAAd/demon-slayer.gif"
+    }
+  },
+  {
+    "name": "reflexos-aprimorados",
+    "id": "44315575389834",
+    "role": "1033124488973393971",
+    "roles": [
+      1031641341198864400
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Reflexos aprimorados",
+      "description": "**▸ 『🪞』 ${title} - `Essa habilidade é apresentada por Rengoku, Giyu e Obanai, onde seu portador poderá desviar de ataques com mais facilidade.`\n\n- Buffs: `Aumenta 2 no roll de desvio.`**",
+      "url": "https://media.tenor.com/k4_iPx8bCU4AAAAC/demon-slayer-kimetsu-no-yaiba-rengoku-vs-akaza.gif"
+    }
+  },
+  {
+    "name": "densidade-ossea",
+    "id": "92086901464924",
+    "role": "1033857125904023593",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Densidade óssea",
+      "description": "**▸ 『🦴』${title} - `Apresentada por Rui. Essa habilidade consiste ao usuário ter seus membros mais duros. Isso é, mais difícil de decapitá-lo.`\n\n - Buffs: `Players com -50% de seus status não conseguirão decapitá-lo.`**",
+      "url": "https://cdn.discordapp.com/attachments/811670581937832022/836984687284191262/1566904231_giphy.gif"
+    }
+  },
+  {
+    "name": "ponto-de-conexao",
+    "id": "43684756248288",
+    "role": "1033857127225237504",
+    "roles": [
+      1031641613883146200,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Ponto de conexão",
+      "description": "**▸ 『◾』${title} - `Apresentada por Daki. Essa habilidade consiste ao usuário poder compartilhar seus sentimentos | status | heranças, Podendo ter 2 corpos ou ter alguém. Como Daki, com seu irmão.`\n\n - Buffs: `O usuário poderá ter 2 corpos, ou compartilhá-lo com alguém (in-rp).`**",
+      "url": "https://media.tenor.com/LT5CXYYZgEgAAAAd/daki-ume.gif"
+    }
+  },
+  {
+    "name": "sangue-venenoso",
+    "id": "4844409602396",
+    "role": "1033857128496103545",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Sangue venenoso",
+      "description": "**▸ 『🩸』${title} - `Apresentada por Muzan e Gyutaro. Essa habilidade consiste ao seu usuário ter um sangue venenoso capaz de matar um Humano em estantes.`\n\n - Buffs: `Poderá ter um sangue venenoso, não funciona com pessoas que tem resistência à veneno rank +A.`**",
+      "url": "https://cdn.discordapp.com/attachments/971804710644371466/971840112096862208/unknown.png"
+    }
+  },
+  {
+    "name": "imunidade-solar",
+    "id": "43361604805010",
+    "role": "1033857129683099698",
+    "roles": [
+      1031641613883146200,
+      1032327680558903400,
+      1031642887374508000
+    ],
+    "rarity": 0,
+    "require": 2,
+    "embed": {
+      "title": "Imunidade solar",
+      "description": "**▸ 『☀️』${title} - `Novamente apresentada por Nezuko Kamado. Essa habilidade consiste ao usuário ser imune ao sol. Ou seja, nn merrer pra ele.`\n\n - Buffs: `Não morrerá pro sol.`\n - Exclusividade: `Família Kamado, Híbrido.`**",
+      "url": "https://cdn.discordapp.com/attachments/1030309862808231966/1034536386478477402/oni-do-sol-17645712-091020192326.jpg"
+    }
+  },
+  {
+    "name": "teleporte-entre-vasos",
+    "id": "64329931502437",
+    "role": "1033857130161250345",
+    "roles": [
+      1031641613883146200,
+      1032336172283867100,
+      1032460992610836500
+    ],
+    "rarity": 0,
+    "require": 2,
+    "embed": {
+      "title": "Teletransporte entre vasos",
+      "description": "**▸ 『🏺』${title} - `Apresentada por Gyokko. Essa habilidade consiste ao usuário teleportar entre vasos.`\n\n - Buffs: `O usuário poderá teleportar entre vasos.`\n - Exclusividade: `Kekkijutsu Gyokko | Família Gyokko.`**",
+      "url": "https://cdn-dgbjn.nitrocdn.com/FxYfqrQRvxfuwEgplNGiwbmtkwOGkvWo/assets/static/optimized/rev-eaa6391/64.media.tumblr.com/7dcc1bdf34c8e82426f55d4eb547473f/05df91923bf36c5d-43/s1280x1920/82e3c27b0675ec2f7218824afa36dcb9.788137eb691a9598b821aef093b46cc6bf20c521.jpg"
+    }
+  },
+  {
+    "name": "reconexao",
+    "id": "82179046878909",
+    "role": "1033857131448913920",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Reconexão",
+      "description": "**▸ 『🩸』${title} - `Novamente apresentada por Nezuko Kamado. Essa habilidade consiste ao usuário solidificar seu sangue para sobreviver. Como Nezuko em sua luta contra Daki, onde ela solidificou seu próprio sangue para sobreviver.`\n\n - Buffs: `Poderá solidificar seus membros com seu sangue`**",
+      "url": "https://cdn.discordapp.com/attachments/971804710644371466/971839520767090698/unknown.png"
+    }
+  },
+  {
+    "name": "crianca-demonio",
+    "id": "56366120582195",
+    "role": "1033857132426174544",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Criança demônio",
+      "description": "**▸ 『👹』 ${title} - `Apresentada por Akaza. Essa habilidade consiste à seu usuário ser um prodígio em tudo que faz, sendo ágil, eficaz e útil.`\n\n - Buffs: `Reduz a metade do tempo para aprender algo.`**",
+      "url": "https://media.tenor.com/s2oZc84FrSUAAAAC/akaza-lick-akaza.gif"
+    }
+  },
+  {
+    "name": "imunidade-a-decapitacao",
+    "id": "60724864590202",
+    "role": "1033857133546045440",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Imunidade à decapitação",
+      "description": "**▸ 『😡』${title} - `Apresentada por Muzan e alguns luas. Essa habilidade consiste ao usuário ser imune à decapitação, Resumindo, não morrerá ao ser decapidado como Akaza ou Kokoshibo.`\n\n - Buffs: `Não morrerá ao ser decapitado.`\n - OBS: `Somente irá matá-lo uma lâmina carmesim, ou, um veneno que nem de pra você se regenerar.`**",
+      "url": "https://media.tenor.com/CZtgsWSE3WcAAAAC/muzan-muzan-kibutsuji.gif"
+    }
+  },
+  {
+    "name": "controle-da-fome",
+    "id": "22772028364734",
+    "role": "1033857134607204392",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Controle da fome",
+      "description": "**▸ 『🩸』${title} - `Novamente apresentada por Nezuko Kamado. Essa habilidade consiste ao usuário poder controlar sua fome insaciável por Humanos.`\n\n - Buffs: `O Oni não sentira atração por comer Humanos.`**",
+      "url": "https://media.tenor.com/lJPfjIDNDvgAAAAC/demon-slayer-kimetsu-no-yaiba.gif"
+    }
+  },
+  {
+    "name": "absorcao-biologica",
+    "id": "26060305700585",
+    "role": "1033857136364630156",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Absorção biológica",
+      "description": "**▸ 『🌸』${title} - `Novamente apresentada por Douma. Essa habilidade consiste ao usuário poder absorver além do corpo da vítima, absorver suas habilidades e status. Como Douma em sua luta contra a Kocho, onde ele absorveu todas as habilidades.`\n\n - Buffs: `O usuário poderá absorver além dos status, as habilidades também.`\n - N/Buffs: `Por poder absorver tudo, o organismo do usuário ficará mais vulnerável.`**",
+      "url": "https://media.tenor.com/aaaVOomLwsUAAAAC/douma-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "dominio-territorial",
+    "id": "41176594122273",
+    "role": "1033857137346089131",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Domínio territorial",
+      "description": "**▸ 『🌅』${title} - `Novamente apresentada por Akaza. Essa habilidade consiste ao usuário poder tomar controle do terreno em sua volta, podendo sentir algo que ele chama de Espírito de luta. Sentido Tanjiro e Giyu em sua batalha.`\n\n - Buffs: `O usuário poderá saber todos que estão no chat, e terá 2 desvios certeiros e +2 no roll de desvio.`**",
+      "url": "https://1.bp.blogspot.com/-AeIJdzqo9wQ/X38o1ww4yXI/AAAAAAAA3J8/YKgP1SHC9lQJuqXzW2kzbDXKaH8wtkVMgCLcBGAsYHQ/s499/Akaza%2BRashin%2BLista%2Bde%2BKekkijutsu.png"
+    }
+  },
+  {
+    "name": "despertar-oni",
+    "id": "26125471724319",
+    "role": "1033857138281422949",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Despertar oni",
+      "description": "**▸ 『👹』${title} - `Novamente apresentada por Muzan. Essa habilidade consiste ao usuário ter um sangue capaz de transformar um Humano em Oni.`\n\n - Buffs: `Poderá transformar Humanos em Onis.`**",
+      "url": "https://media.tenor.com/9TzCaltizuwAAAAC/muzan-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "resistencia-a-glicinia",
+    "id": "95197067793313",
+    "role": "1033882140322045983",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Resistência à glicínia",
+      "description": "**▸ 『🌸』${title} - `Apresentada por Douma. Essa habilidade consiste em seu usuário ser resistente à glicínia. Ou seja, não morrer para mesma.`\n\n - Buffs: `O usuário não morrerá pela glicínia.`**",
+      "url": "https://media.tenor.com/A7dpD-pSHqAAAAAC/flower-breathing-kanao.gif"
+    }
+  },
+  {
+    "name": "minipulacao-celular",
+    "id": "49673233110717",
+    "role": "1033882141379002408",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Manipulação celular",
+      "description": "**▸ 『🧬』${title} - `Apresentada por Nezuko Kamado. Essa habilidade consiste em seu usuário manipular seu corpo de qualquer forma/tamanho.`\n\n - Buffs: `Poderá modificar seu corpo.`**",
+      "url": "https://media.discordapp.net/attachments/923308470994878464/929395538569355364/ezgif.com-gif-maker.gif"
+    }
+  },
+  {
+    "name": "regeneracao-avancada",
+    "id": "87520652104341",
+    "role": "1033882142784114749",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Regeneração avançada",
+      "description": "**▸ 『🩸』${title} - `Apresentada por Muzan e alguns luas. Essa habilidade consiste ao usuário ter uma regeneração rápida, podendo facilmente se regenerar em instantes.`\n\n - Buffs: `O usuário ganha +5% de status a cada turno em luta.`**",
+      "url": "https://media.tenor.com/s2oZc84FrSUAAAAC/akaza-lick-akaza.gif"
+    }
+  },
+  {
+    "name": "quebra-da-maldicao",
+    "id": "97642641087266",
+    "role": "1034219436883836969",
+    "roles": [
+      1032327680558903400,
+      1036680755771883500,
+      1032336175106633700
+    ],
+    "rarity": 0,
+    "require": 2,
+    "embed": {
+      "title": "Quebra da maldição",
+      "description": "**▸ 『🩸』${title} - `Apresentada por Tamayo. Essa habilidade consiste ao usuário não ser controlado por nem um Oni.`\n\n - Buffs: `Não será controlado por nenhum Oni.`**",
+      "url": "https://media.tenor.com/8IXlatMd5LQAAAAC/tamayo-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "fusao",
+    "id": "54639453538780",
+    "role": "1034223665119768637",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Fusão",
+      "description": "**▸ 『🚅』${title} - `Apresentada por Enmu. Essa habilidade consiste ao usuário poder fundir com coisas`\n\n - Buffs: `Não será controlado por nenhum Oni.`\n - Regras: `Onis de baixo rank só poderão fundir com coisas pequenas, onis de médio rank, com objetos médios, os de alto rank é ilimitado`**",
+      "url": "https://media.tenor.com/T-AHrd4QKXEAAAAC/enmu-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "fisiologia-anormal",
+    "id": "87253709756118",
+    "role": "1034230554079526932",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Fisiologia anormal",
+      "description": "**▸ 『🩸』${title} - `Novamente apresentada por Muzan. Essa habilidade consiste ao usuário poder ter uma fisiologia anormal. Algo em torno, de ter 2 cérebros e 3 corações - (Muzan flamengista guys)`\n\n - Buffs: `Poderá ter uma regeneração em 2x+;.`**",
+      "url": "https://cdn.discordapp.com/attachments/971804710644371466/973276004808269894/unknown.png"
+    }
+  },
+  {
+    "name": "criacao-corporal",
+    "id": "82487506027471",
+    "role": "1034513924189589514",
+    "roles": [
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Criação corporal",
+      "description": "**▸ 『👹』${title} - `Apresentada por Sussumaru. Essa habilidade consiste ao usuário poder criar vários membro em diferentes locais do corpo`\n\n - Buffs: `Poderá criar membro em diferentes lugares de seu corpo.`**",
+      "url": "https://media.tenor.com/rvt_J6kjdR4AAAAC/demon-slayer-kimetsu-no-yaiba.gif"
+    }
+  },
+  {
+    "name": "forca-extrema",
+    "id": "15459634917750",
+    "role": "1034050954741415936",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Força extrema",
+      "description": "**▸ 『💪』${title} - `Novamente apresentada por Tanjiro Kamado. Essa habilidade consiste ao usuário ter uma força anormal.`\n\n - Buffs: `2x de Dano, por batalha.`\n - N/Buffs: `Só poderá usar essa habilidade 2 vezes a cada 4 turnos.`**",
+      "url": "https://media.tenor.com/T-Hdo4ZwX3MAAAAd/kimetsu-no-yaiba-tanjiro-vs-inosuke.gif"
+    }
+  },
+  {
+    "name": "percepcao-sensorial",
+    "id": "31305892980248",
+    "role": "1034050959237718067",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Percepção sensorial",
+      "description": "**▸ 『👁️』${title} - `Apresentada por Muzan Kibutsuji. Essa habilidade consiste ao usuário ter uma percepção fora do comum, podendo perceber presença de pessoas a Quilômetros de distância.`\n\n - Buffs: `Saberá todos que estão em um canal.`**",
+      "url": "https://media.tenor.com/9TzCaltizuwAAAAC/muzan-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "ocultamento-de-presenca",
+    "id": "1414209053094",
+    "role": "1034050963033559041",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Ocultamento de presença",
+      "description": "**▸ 『👺』${title} - `Apresentada por Sakonji Urokodaki. Essa habilidade consiste ao usuário poder ocultar totalmente sua presença, assim , Não sendo notado pelos sentidos humanos.`\n\n - Buffs: `Poderá ocultar totalmente sua presença.`\n - N/Buffs: `Não funciona com que está com o mundo transparente ativado, ou com que tem presença sensorial.`**",
+      "url": "https://media.tenor.com/2fUPUeOdCTYAAAAC/sakonji-urokodaki.gif"
+    }
+  },
+  {
+    "name": "olhos-arco-iris",
+    "id": "78820891419735",
+    "role": "1034050965319454770",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Olhos arco-íris",
+      "description": "**▸ 『🌈』${title} - `Apresentada por Douma. Essa habilidade consiste ao usuário ter olhos parecendo arco-íris. Esses olhos, dão vários buffs ao usuário no sentido ocular.`\n\n - Buffs: `Terá 2 desvios certeiros à cada batalha, 2d(x) no roll de desvio.`**",
+      "url": "https://media.tenor.com/rAhtudS7aUoAAAAd/douma-gear.gif"
+    }
+  },
+  {
+    "name": "mundo-transparente",
+    "id": "31415123968791",
+    "role": "1034050978275655680",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Mundo transparente",
+      "description": "**▸ 『💀』${title} - `Apresentada por Youriichi Tsugikuni. Essa habilidade consiste ao usuário enxergar um totalmente transparente podendo enxergar todos os pontos vitais de seu oponente.`\n\n - Buffs: `Ao ser ativado, lê da 1 desvio certeiro, +5 no roll de desvio, -2 no roll do oponente.`\n - OBS: `-2 no roll de desvio do oponente, não funcionará caso ele estiver com o essa habilidade ativa.`**",
+      "url": "https://blogger.googleusercontent.com/img/a/AVvXsEh9VuQPmod5STLqMPJksqwpAOd10RP8pzg9MUWjPuJuhAjpfR-QxhhZwY9A55eEsb-28S618HUbdBm1Pwc4BzcnO8RH7mU0wFgozWFgjmFROeV9qRhq-aUljN4vgHCOh8LRR0Q15TS99LSYRDVBmiFVhnyzYyeqtxNc4x2Nt1s9STwgPbkxLec67rpoww=w400-h175"
+    }
+  },
+  {
+    "name": "flexibilidade-anormal",
+    "id": "1349790152913",
+    "role": "1034051007048581162",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Flexibilidade anormal",
+      "description": "**▸ 『🌀』${title} - `Apresentado por Inosuke Hashibira. Essa habilidade cosiste ao usuário ter uma flexibilidade fora do comum.`\n\n - Buffs: `O tal será altamente flexível.`**",
+      "url": "https://media.tenor.com/Drt0FjgVqeYAAAAd/hashibira-inosuke-bend.gif"
+    }
+  },
+  {
+    "name": "vontade-inquebravel",
+    "id": "68306875125029",
+    "role": "1034050986018361414",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Vontade inquebrável",
+      "description": "**▸ 『🤬』${title} - `Apresentada por Akaza. Essa habilidade consiste ao usuário ser muito orgulhoso por luta.`\n\n - Buffs: `Ao estar com -40% de sua vida, dará 2x de dano e 2d(x) no desvio.`**",
+      "url": "https://64.media.tumblr.com/b059cf172010ad7217517352676140c7/8176ae6560954d4a-11/s540x810/4bff0f77d524a4750a41424529f0b8aed0ee0912.pnj"
+    }
+  },
+  {
+    "name": "velocidade-aprimorada",
+    "id": "18142479837208",
+    "role": "1034050989252161616",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Velocidade aprimorada",
+      "description": "**▸ 『⚡』${title} - `Apresentada por Zenitsu Agatsuma e Tengen Uzui. Essa habilidade consiste ao usuário ser bem mais rápido que slayers normais.`\n\n - Buffs: `Reduzirá na metade o tempo de locomoção.`\n - Regra: <#1030904954304594111>**",
+      "url": "https://media.tenor.com/aIvuHZ0RISMAAAAd/kimetsu-no-yaiba-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "dupla-respiracao",
+    "id": "95323639580465",
+    "role": "1034051001646338048",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Dupla respiração | Duplo kekkijutsu",
+      "description": "**▸ 『🎏』${title} - `Apresentada por Tanjiro Kamado. Essa habilidade consiste ao usuário ter 2 respirações | kekkijusts.`\n\n - Buffs: `Poderá ter 2 respirações | kekkijutsus.`**",
+      "url": "https://media.tenor.com/9yKSo2ksB5kAAAAC/tanjiro-kimetsu.gif"
+    }
+  },
+  {
+    "name": "presenca-aterrorizante",
+    "id": "80055488205073",
+    "role": "1034051005148577792",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Presença aterrorizante",
+      "description": "**▸ 『😱』${title} - `Novamente apresentada por Youriichi Tsugikuni. Essa habilidade consiste ao usuário impor que ele é o mais forte do local.`\n\n - Buffs: `Ao ser ativado, você irá impor medo em seu oponente.`\n - N/Buffs: `Não funciona com que tem a mesma habilidade.`**",
+      "url": "https://media.tenor.com/4H72NuYnsUEAAAAC/yoriichi.gif"
+    }
+  },
+  {
+    "name": "agilidade-superior",
+    "id": "6931569114538",
+    "role": "1034051562139557941",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Agilidade anormal",
+      "description": "**▸ 『🏃‍♂️』${title} - `Apresentada por Shinobu Kocho e Muichiro Tokito. Essa habilidade consiste ao usuário ter uma agilidade anormal.`\n\n - Buffs: `+2 no roll de desvio, 2 desvios certeiros, 1 ataque certeiro.`**",
+      "url": "https://media.tenor.com/fZ60rl9oBCQAAAAC/shinobu-shinobu-kocho.gif"
+    }
+  },
+  {
+    "name": "resistencia-a-veneno",
+    "id": "98223187319743",
+    "role": "1034082975291289642",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Resistência à veneno",
+      "description": "**▸ 『💊』${title} - `Apresentada por Zenitsu Agatsuma e Shinobu Kocho. Essa habilidade consiste ao organismo de seu usuário ser prepaado para receber altas doses de veneno, podendo decompor, ou adaptá-lo ao tipo de veneno. Como Kocho, em sua luta contra o Douma(\"Que ela perdeu\") ela foi absorvida sobrando apenas seu veneno, assim facilitando a batalha contra Douma.`\n\n - Buffs: `Seu organismo será resistente à veneno.`\n - Regras: <#1035306048254394469>**",
+      "url": "https://cdn.discordapp.com/attachments/971804711768436766/973272294069792778/unknown.png"
+    }
+  },
+  {
+    "name": "cranio-poderoso",
+    "id": "47649426162901",
+    "role": "1035600629206351923",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Crãnio poderoso",
+      "description": "**▸ 『💀』${title} - `Novamente apresentada por Tanjiro Kamado. Essa habilidade consiste ao usuário ter um crânio deru como uma pedra.`\n\n - Buffs: `Ao tomar dano, será 50% do dano.`\n - N/Buffs: `Só poderá usar essa habilidade 2 vezes a cada 4 turnos.`**",
+      "url": "https://media.tenor.com/1xHAx5bI1DQAAAAC/demon-slayer-kimetsu-no-yaiba.gif?cu=2"
+    }
+  },
+  {
+    "name": "flexibilidade-com-armas",
+    "id": "59906770094819",
+    "role": "1034050983749222440",
+    "roles": [
+      1031641341198864400,
+      1031641613883146200
+    ],
+    "rarity": 0,
+    "require": 1,
+    "embed": {
+      "title": "Flexibilidade com armas",
+      "description": "**▸ 『🏹』${title} - `Apresentada por Sanemi Shinazugawa. Essa habilidade consiste ao usuário ter uma flexibilidade com armas fora do comum.`\n\n - Buffs: `O tal será altamente flexível com objetos.`**",
+      "url": "https://cdn.discordapp.com/attachments/1030309862808231966/1035655639038447717/unknown.png"
+    }
+  }
+]

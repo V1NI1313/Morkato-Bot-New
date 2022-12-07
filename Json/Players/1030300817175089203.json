@@ -1,0 +1,35 @@
+[
+  {
+    "info": {
+      "name": "Morkato",
+      "nick": "Morkato",
+      "year": "21",
+      "breed": 0,
+      "history": null,
+      "xp": 0,
+      "level": 1,
+      "lvMin": 100,
+      "id": 510948690354110460
+    },
+    "status": {
+      "life": 3000,
+      "stamina": 3000,
+      "force": 0.5
+    },
+    "rolls": {
+      "family": {
+        "var": 3,
+        "inv": {}
+      },
+      "hability": {
+        "var": 3,
+        "inv": {}
+      }
+    },
+    "historic": [],
+    "inv": [],
+    "settings": {
+      "auto-family-roll": false
+    }
+  }
+]
