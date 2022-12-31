@@ -1,4 +1,8 @@
 class utilsError(Exception): ...
+class ImportPermissionError(utilsError):
+  def __init__(self, name: str) -> None:
+    super().__init__(f"Você não tem permissão para importar essa lib!")
+    self.name: str = name
 class GuildNotExists(utilsError):
   def __init__(self, Guild: object, *args, **kwgs) -> None:
     super().__init__(f"Guild {Guild.id} not exists!")
@@ -15,3 +19,4 @@ class ResponseError(utilsError):
     super().__init__(message)
 
 class ArgumentTypeNotSupported(utilsError): ...
+class NotChoices(utilsError): ...

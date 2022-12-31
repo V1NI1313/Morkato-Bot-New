@@ -1,8 +1,8 @@
 {
   "roles": {
-    "human": 1031641341198864400,
-    "oni": 1031641613883146200,
-    "hybrid": 1038826253467263000
+    "human": "1031641341198864394",
+    "oni": "1031641613883146280",
+    "hybrid": "1038826253467263016"
   },
   "player": {
     "PlayerFormat": "{nick} {year} |❤️{life}|{err}{stamina}",
@@ -25,7 +25,7 @@
       "hability": 5
     }
   },
-  "config": {
+  "settings": {
     "playerBreed": 0
   }
 }

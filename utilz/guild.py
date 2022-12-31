@@ -1,11 +1,13 @@
+from __future__ import annotations
+
+from .guild_utils import GuildElements, GuildElementsFilter, _GuildSettings
 from .hability import (Hability, New_Hability)
-from typing import (Optional, Generic, Callable, TypeVar, Union, Any)
-from typing_extensions import (Self)
-from .user import (User, New_User)
 from .family import (Family, New_Family)
 from .player import (Player, New_Player)
-from functools import cache
+from .user import (User, New_User)
+from random import randint
 from .func import Route
+from . import utils
 import discord
 ### -> Exceptions <- ###
 from .errors import (
@@ -15,98 +17,35 @@ from .errors import (
   FamilyNotExists,
   HabilityNotExists,
   PlayerNotExists,
-  UserNotExists
+  UserNotExists,
+  ResponseError
 )
-
+typed_player = utils.Typed_Dict({})
 GuildErrors = {
   "GuildNotExists": GuildNotExists,
   "GuildAlreadyExists": GuildAlreadyExists
 }
-T = TypeVar('T')
+T = utils.TypeVar('T')
+MISSING = utils.MISSING
+
 class Guild:
   def __init__(
     self,
     Guild: discord.Guild,
-    data: dict[str, Any]
+    data: dict[str, utils.Any]
   ) -> None:
     self._ep = Guild
     self.data = data
     self.id = Guild.id
     
-    self.human_roleID: Optional[int] = data["roles"]["human"]
-    self.oni_roleID: Optional[int] = data["roles"]["oni"]
-    self.hybrid_roleID: Optional[int] = data["roles"]["hybrid"]
-  @property
-  def human_role(self) -> Optional[discord.Role]:
-    return self._ep.get_role(self.human_roleID)
-  @property
-  def oni_role(self) -> Optional[discord.Role]:
-    return self._ep.get_role(self.oni_roleID)
-  @property
-  def hybrid_role(self) -> Optional[discord.Role]:
-    return self._ep.get_role(self.hybrid_roleID)
-  @property
-  @cache
-  def settings(self):
-    return _GuildConfig(self)
-  @property
-  @cache
-  def habilitys(self):
-    return _GuildHabilitys(self)
-  @property
-  @cache
-  def familys(self):
-    return _GuildFamilys(self)
-  @property
-  @cache
-  def players(self):
-    return _GuildPlayers(self)
-  @property
-  @cache
-  def users(self):
-    return _GuildUsers(self)
-  def edit(self, **kwgs) -> None:
-    data = self.data
-    roles = data["roles"]
-    player = data["player"]
-    roles["human"] = (
-      kwgs.get("human_role", roles["human"]) 
-      if isinstance(kwgs.get("human_role", roles["human"]), int)
-      else kwgs.get("human_role", roles["human"]).id
-    )
-    roles["oni"] = (
-      kwgs.get("oni_role", roles["oni"]) 
-      if isinstance(kwgs.get("oni_role", roles["oni"]), int)
-      else kwgs.get("oni_role", roles["oni"]).id
-    )
-    roles["hybrid"] = (
-      kwgs.get("hybrid_role", roles["hybrid"]) 
-      if isinstance(kwgs.get("hybrid_role", roles["hybrid"]), int)
-      else kwgs.get("hybrid_role", roles["hybrid"]).id
-    )
-    player["defaultStatus"]["human"] = {
-      "life": kwgs.get("human_life", player["defaultStatus"]["human"]["life"]),
-      "stamina": kwgs.get("human_stamina", player["defaultStatus"]["human"]["stamina"])
-    }
-    player["defaultStatus"]["oni"] = {
-      "life": kwgs.get("oni_life", player["defaultStatus"]["oni"]["life"]),
-      "stamina": kwgs.get("oni_stamina", player["defaultStatus"]["oni"]["stamina"])
-    }
-    player["defaultStatus"]["hybrid"] = {
-      "life": kwgs.get("hybrid_life", player["defaultStatus"]["hybrid"]["life"]),
-      "stamina": kwgs.get("hybrid_stamina", player["defaultStatus"]["hybrid"]["stamina"])
-    }
-    player["rolls"] = {
-      "family": kwgs.get("family_rolls", player["rolls"]["family"]),
-      "hability": kwgs.get("hability_rolls", player["rolls"]["hability"])
-    }
-    data = self.settings.edit(**kwgs)
-    self.__init__(self, data)
+    self.human_roleID: utils.Optional[int] = int(data["roles"]["human"])
+    self.oni_roleID: utils.Optional[int] = int(data["roles"]["oni"])
+    self.hybrid_roleID: utils.Optional[int] = int(data["roles"]["hybrid"])
   @classmethod
   def from_guild(
     cls,
     _Guild: discord.Guild
-  ) -> Self:
+  ) -> Guild:
     response = Route.get(f"/desktop/Guilds/{_Guild.id}")
     if not response.status_code == 200:
       raise GuildErrors.get(response.json()["message"], Exception)(_Guild)
@@ -114,123 +53,133 @@ class Guild:
       Guild=_Guild,
       data=response.json()
     )
-class _GuildUsers(list):
-  def __init__(self, Guild: Guild) -> None:
-    self.ep = Guild
-    response = Route.get(f"/desktop/Guilds/{Guild.id}/Users")
+  @property
+  def human_role(self) -> utils.Optional[discord.Role]:
+    return self._ep.get_role(self.human_roleID)
+  @property
+  def oni_role(self) -> utils.Optional[discord.Role]:
+    return self._ep.get_role(self.oni_roleID)
+  @property
+  def hybrid_role(self) -> utils.Optional[discord.Role]:
+    return self._ep.get_role(self.hybrid_roleID)
+  @utils.cached_property
+  def settings(self) -> _GuildSettings:
+    return _GuildSettings(self)
+  @utils.cached_property
+  def habilitys(self) -> utils.Union[GuildElements[Hability], _GuildHabilitys]:
+    return _GuildHabilitys(self)
+  @utils.cached_property
+  def familys(self) -> utils.Union[GuildElements[Family], _GuildFamilys]:
+    return _GuildFamilys(self)
+  @utils.cached_property
+  def users(self) -> utils.Union[GuildElements[User], _GuildUsers]:
+    return _GuildUsers(self)
+  @utils.cached_property
+  def players(self) -> GuildPlayers:
+    return GuildPlayers(self)
+  def get_data(self) -> dict[str, utils.Any]:
+    response = Route.get(f"/desktop/Guilds/{self.id}")
     if not response.status_code == 200:
-      raise GuildErrors.get(response.json()["message"], utilsError)(Guild)
-    data = response.json()
-    for i in data:
-      self.append(User(self.ep, i))
-  def get(
-    self,
-    arg: Union[discord.Member, User]
-  ) -> User:
-    try: return self[self.index(arg)]
-    except: raise UserNotExists(self.ep, arg)
-  def new(
-    self,
-    _User: Union[discord.Member, discord.User]
-  ) -> User:
-    user = New_User(self.ep, _User)
-    self.append(user)
-    return user
-class _GuildPlayers(list):
+      raise ResponseError(f"Failhed connection guild id {self.id}")
+    return response.json()
+  def edit(self, **kwgs) -> None: ...
+class _GuildHabilitys(GuildElementsFilter):
   def __init__(self, Guild: Guild) -> None:
-    self.ep = Guild
-    response = Route.get(f"/desktop/Guilds/{Guild.id}/Players")
-    if not response.status_code == 200:
-      raise GuildErrors.get(response.json()["message"])(Guild)
-    data = response.json()
-    for i in data:
-      self.append(Player(Guild, i))
-  def get(
-    self,
-    arg: Union[Player, int]
-  ) -> Player:
-    try: return self[self.index(arg)]
-    except: raise PlayerNotExists(arg)
-class _GuildFamilys(list):
-  def __init__(self, Guild: Guild) -> None:
-    self.ep = Guild
-    response = Route.get(f"/desktop/Guilds/{Guild.id}/Family")
-    if not response.status_code == 200:
-      raise GuildErrors.get(response.json()["message"])(Guild)
-    data = response.json()
-    for i in data:
-      self.append(Family(Guild, i))
-  def get(
-    self,
-    arg: Union[discord.Role, str, int]
-  ) -> Family:
-    try: return self[self.index(arg)]
-    except: raise FamilyNotExists(arg)
-  def new(
-    self,
-    name: str,
-    role: Union[discord.Role, int]
-  ) -> Family: ...
-class _GuildHabilitys(list):
-  def __init__(self, Guild: Guild) -> None:
-    self.ep = Guild
     response = Route.get(f"/desktop/Guilds/{Guild.id}/Hability")
     if not response.status_code == 200:
-      raise GuildErrors.get(response.json()["message"])(Guild)
-    data = response.json()
-    for i in data:
-      self.append(Hability(Guild, i))
-  def get(
-    self,
-    arg: Union[discord.Role, str, int]
-  ) -> Hability:
-    try: return self[self.index(arg)]
-    except: raise HabilityNotExists(arg)
+      raise ResponseError(f"Failhed connection guild id {self.id} habilitys")
+    super().__init__(Guild, response.json(), Hability, newMethod=New_Hability)
+  def fromUser(self, User: User) -> utils.Optional[list[Hability]]:
+    habilitys = [self.get(int(i)) for i in User.rolls_habilitys.toJson()]
+    return (habilitys if len(habilitys) else None)
+  def fromRequireUser(self, User: User) -> utils.Optional[list[Hability]]:
+    habilitys = [i for i in self if i.verificationUser(User)]
+    return (habilitys if len(habilitys) else None)
+  def filter(self, User: utils.Optional[User]=None) -> utils.Optional[dict[int, list[Hability]]]:
+    habilitys = ((self if len(self) else None) if User is None else self.fromRequireUser(User))
+    if habilitys is None:
+      return None
+    return self._filter(habilitys)
+  def random(self, User: utils.Optional[User]=None) -> Hability:
+    filter_habilitys = self.filter(User)
+    if filter_habilitys is None:
+      return None
+    habilitys = []
+    habilitys += filter_habilitys[0]*20
+    habilitys += filter_habilitys[1]*15
+    habilitys += filter_habilitys[2]*8
+    habilitys += filter_habilitys[3]*4
+    return habilitys[randint(0, len(habilitys)-1)]
+class _GuildFamilys(GuildElementsFilter):
+  def __init__(self, Guild: Guild, /) -> None:
+    response = Route.get(f"/desktop/Guilds/{Guild.id}/Family")
+    if not response.status_code == 200:
+      raise ResponseError(f"Failhed connection guild id {self.id} familys")
+    super().__init__(Guild, response.json(), Family, newMethod=New_Family)
+  def fromUser(self, User: User) -> utils.Optional[list[Family]]:
+    familys = [self.get(int(i)) for i in User.familys.toJson()]
+    return (familys if len(familys) else None)
+  def fromRequireUser(self, User: User) -> utils.Optional[list[Family]]:
+    familys = [i for i in self if i.verificationUser(User)]
+    return (familys if len(familys) else None)
+  def filter(self, User: User=None) -> utils.Optional[dict[int, list[Family]]]:
+    familys = ((self if len(self) else None) if User is None else self.fromRequireUser(User))
+    if familys is None:
+      return None
+    return self._filter(familys)
+  def random(self, User: User=None) -> utils.Optional[Family]:
+    filter_familys = self.filter(User)
+    if filter_familys is None:
+      return None
+    familys = [None]*30
+    familys += filter_familys[0]*25
+    familys += filter_familys[1]*20
+    familys += filter_familys[2]*8
+    familys += filter_familys[3]*4
+    return familys[randint(0, len(familys)-1)]
+class _GuildUsers(GuildElements):
+  def __init__(self, Guild: Guild, /) -> None:
+    response = Route.get(f"/desktop/Guilds/{Guild.id}/Users")
+    if not response.status_code == 200:
+      raise ResponseError(f"Failhed connection guild id {self.id} users")
+    super().__init__(Guild, response.json(), User, newMethod=New_User)
+  def fromFamily(self, Family: Family) -> utils.Optional[list[User]]:
+    users = [i for i in self if str(Family.id) in i.rolls_familys.toJson()]
+    return (users if len(users) else None)
+class GuildPlayers(list):
+  def __init__(self, Guild: Guild, /) -> None:
+    response = Route.get(f"/desktop/Guilds/{Guild.id}/Players")
+    if not response.status_code == 200:
+      raise ResponseError(f"Failhed connection guild id {self.id} players and users")
+    players = response.json()
+    self.dict = dict(map(lambda elem: (int(elem["id"]), Player(Guild, elem)), players))
+    self.ep = Guild
+    super().__init__(self.dict.values())
+  def get(self, /, id: int) -> utils.Optional[Player]:
+    return self.dict.get(id)
   def new(
     self,
-    name: str,
-    role: Optional[discord.Role]=None
-  ) -> Hability:
-    hability = New_Hability(self.ep, name, role)
-    self.append(hability)
-    return hability
-class _GuildConfig:
-  def __init__(self, Guild: Guild) -> None:
-    self.ep = Guild
-  def edit(self, **kwgs) -> None:
-    response = Route.patch(
-      f"/desktop/Guilds/{self.ep._ep.id}",
-      data=self.ep.data,
-      headers={
-        "content-type": "application/json"
-      }
+    user: User, /,
+    *, name: str,
+    surname: str=None,
+    age: int,
+    family: Family
+  ) -> Player:
+    player = New_Player(
+      self.ep,
+      user,
+      name=name,
+      surname=surname,
+      age=age,
+      family=family
     )
-    if not response.status_code == 200:
-      raise GuildErrors.get(response.json()["message"], Exception)(self.ep)
-    return response.json()
+    self.dict[player.id] = player
+    self += [player,]
+    return player
 def New_Guild(
-  _Guild: discord.Guild,
-  human: Union[discord.Role, int],
-  oni: Union[discord.Role, int],
-  hybrid: Union[discord.Role, int],
-  separator: list[Union[discord.Role, int]]
-) -> Guild:
-  data = {
-    "human": (human if isinstance(human, int) else human.id),
-    "oni": (oni if isinstance(oni, int) else oni.id),
-    "hybrid": (hybrid if isinstance(hybrid, int) else hybrid.id),
-    "separator": [(i if isinstance(i, int) else i.id) for i in separator if (isinstance(i, int) or isinstance(i, discord.Role))]
-  }
-  response = Route.post(
-    f"/desktop/Guilds/{_Guild.id}",
-    data=data,
-    headers={
-      "content-type": "application/json"
-    }  
-  )
-  if not response.status_code == 200:
-    raise GuildErrors.get(response.json()["message"], Exception)(_Guild)
-  return Guild(
-    Guild=_Guild,
-    data=response.json()
-  )
+  guild: discord.Guild,
+  human: utils.Union[discord.Role, int],
+  oni: utils.Union[discord.Role, int],
+  hybrid: utils.Union[discord.Role, int],
+  separator: list[utils.Union[discord.Role, int]]
+) -> Guild: ...

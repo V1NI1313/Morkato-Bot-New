@@ -1,17 +1,18 @@
-from typing import (Optional, Generic, TypeVar, Union, Any)
-from typing_extensions import Self
+from __future__ import annotations
+
+from . import utils
 import requests
 import json
 import re
 
-T = TypeVar('T')
+T = utils.TypeVar('T')
 class Route:
   url: str = "http://localhost:5500"
   
   @classmethod
   def get(
     cls,
-    local: str,
+    local: str, /,
     **kwgs
   ) -> requests.Response:
     url = f"{cls.url}{f'/`{local}' if not local[0]=='/' else local}"
@@ -19,9 +20,9 @@ class Route:
   @classmethod
   def post(
     cls,
-    local: str,
-    data: Union[str, int, dict, bytes],
-    headers: Optional[dict[str, Union[str, int, bool]]]=...
+    local: str, /,
+    data: utils.Union[str, int, dict, bytes],
+    headers: utils.Optional[dict[str, utils.Union[str, int, bool]]]=...
   ) -> requests.Response:
     url = f"{cls.url}{f'/{local}' if not local[0]=='/' else local}"
     _headers = (
@@ -32,17 +33,14 @@ class Route:
       }
     )
     if isinstance(data, dict):
-      for i in data:
-        data[i] = (str(data[i]) if isinstance(data[i], int) else data[i])
-      data = json.dumps(data)
-    _data = data
+      _data = json.dumps(data)
     return requests.post(url, data=_data, headers=_headers)
   @classmethod
   def patch(
     cls,
-    local: str,
-    data: Union[str, int, dict, bytes],
-    headers: Optional[dict[str, Union[str, int, bool]]]=...
+    local: str, /,
+    data: utils.Union[str, int, dict, bytes],
+    headers: utils.Optional[dict[str, utils.Union[str, int, bool]]]=...
   ) -> requests.Response:
     url = f"{cls.url}{f'/{local}' if not local[0]=='/' else local}"
     _headers = (
@@ -53,34 +51,31 @@ class Route:
       }
     )
     if isinstance(data, dict):
-      for i in data:
-        data[i] = (str(data[i]) if isinstance(data[i], int) else data[i])
-      data = json.dumps(data)
-    _data = data
+      _data = json.dumps(data)
     return requests.patch(url, data=_data, headers=_headers)
   @classmethod
   def delete(
     cls,
-    local: str
+    local: str, /
   ) -> requests.Response:
     url = f"{cls.url}{f'/{local}' if not local[0]=='/' else local}"
     return requests.delete(url)
 def getAll(array: list, obj: object) -> list:
   return [i for i in array if i == obj]
-class Decimals(Generic[T]):
+class Decimals(utils.Generic[T]):
   def __init__(self, num: T) -> None:
     self.value: T = num
   def __repr__(self) -> str:
     return str(self.value)
-  def __add__(self, n: T) -> Generic[T]:
+  def __add__(self, n: T) -> utils.Generic[T]:
     return Decimals(self.value+n)
-  def normalize(self) -> Self:
+  def normalize(self) -> Decimals:
     if isinstance(self.value, int):
       return Decimals(self.value)
     normalized = round(self.value, 2)
     normalized = str(normalized).strip('0').strip('.')
     return Decimals(eval(normalized))
-  def parseInt(self) -> Self:
+  def parseInt(self) -> Decimals:
     return Decimals(round(self.value))
   def normalizeString(self) -> str:
     if isinstance(self.value, float):
@@ -92,4 +87,8 @@ class Decimals(Generic[T]):
     elif value >= 1000 and value < 1000000:
       value = str(Decimals(value/1000).normalize()).strip('0').strip('.')
       return f"{value}k"
-  
+def setDictOptional(obj: dict, key: str, value: utils.Any) -> dict:
+  if value is None:
+    return obj
+  obj[key] = value
+  return obj

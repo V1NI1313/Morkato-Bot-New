@@ -1,88 +1,87 @@
-from typing import (Optional, Union, Any)
-from typing_extensions import (Self)
-from functools import cache
-from .func import Route
+from __future__ import annotations
+
+from .func import Route, setDictOptional
+from typing import TYPE_CHECKING
+from . import utils
 import discord
 ### -> Exceptions <- ###
 from .errors import (
+  utilsError,
   GuildNotExists,
   GuildAlreadyExists,
   ResponseError
 )
 
-GuildErrors = {
+if TYPE_CHECKING:
+  from .guild import Guild
+
+Errors = {
   "GuildNotExists": GuildNotExists,
   "GuildAlreadyExists": GuildAlreadyExists
 }
-HabilityErrors = {
-  
-}
-def setDictOptional(obj: dict, key: str, value: Any) -> dict:
-  if value is None:
-    return obj
-  if isinstance(value, list):
-    value = [(
-      i
-      if not isinstance(i, discord.Role)
-      else i.id
-      ) for i in value
-    ]
-  obj[key] = (
-    value
-    if not isinstance(value, discord.Role)
-    else value.id
-  )
-  return obj
+
+class HabilityAlreadyExists(utilsError):
+  def __init__(self, hability: Hability ) -> None:
+    super().__init__(f"Hability {hability.name} already exists")
+
 class Hability:
   def __init__(
     self,
-    Guild: Any,
+    Guild: Guild,
     data: dict[str, dict]
   ) -> None:
     self.ep = Guild
     
     self.name: str = data["name"]
     self.id: int = int(data["id"])
-    self.roleID: Optional[int] = data["role"]
-    if not self.roleID is None:
-      self.roleID = int(self.roleID)
+    self.roleID: utils.Optional[int] = (int(data["role"]) if not data["role"] is None else None)
+    self.rolesID: utils.Optional[list[int]] = ([int(i) for i in data["roles"]] if not data["roles"] is None else None)
+    self.rarity: int = data["rarity"]
+    self.require: int = data["require"]
+    
     self.title: str = data["embed"]["title"]
     self.description: str = data["embed"]["description"]
-    self.url: Optional[str] = data["embed"]["url"]
+    self.url: utils.Optional[str] = data["embed"]["url"]
   def __repr__(self) -> str:
-    return f"utilz.Hability(name={self.name!r} id={self.id} role={self.roleID})"
-  def __eq__(self, __other: Union[discord.Role, str, int]) -> bool:
-    if isinstance(__other, discord.Role):
-      return not self.roleID is None and self.role.id == __other.id
-    if isinstance(__other, Hability):
-      __other = __other.id
-    return ((
-        isinstance(__other, str)
-        and __other == self.name
-      ) or (
-        isinstance(__other, int)
-        and self.id == __other
-      ))
+    return f"utilz.Hability(name={self.name!r} id={self.id} role={self.role})"
+  def __eq__(self, __other: utils.Self) -> bool:
+    if not isinstance(__other, Hability):
+      raise TypeError("object is not type `utilz.Hability`")
+    return __other.id == self.id
   @property
-  def role(self) -> Optional[discord.Role]:
+  def role(self) -> utils.Optional[discord.Role]:
     return self.ep._ep.get_role(self.roleID)
-  def get_data(self) -> dict[str, Any]:
+  @property
+  def roles(self) -> utils.Optional[list[discord.Role]]:
+    return list(map(getattr(self.ep._ep, "get_role", lambda id: utils.get(self.ep._ep.roles, id=id)), self.rolesID))
+  def get_data(self) -> dict[str, utils.Any]:
     response = Route.get(f"/desktop/Guilds/{self.ep.id}/Hability/{self.id}")
     if not response.status_code == 200:
       raise ResponseError(f"Failed connection in hability id {self.id} of guild id {self.ep.id}")
     return response.json()
+  def verificationUser(self, User) -> bool:
+    verificationRoles: bool = (self.rolesID is None)
+    verificationInventory: bool = (User.rolls_habilitys.toJson().get(str(self.id), 0) < 2)
+    if not verificationInventory:
+      return False
+    if not verificationRoles:
+      roles = [i for i in User.auth.roles if i.id in self.rolesID]
+      verificationRoles = (len(roles) >= self.require)
+      if not verificationRoles:
+        return False
+    return (verificationRoles and verificationInventory)
   def embed(self, **kwgs) -> discord.Embed:
     title: str = (self.name if self.title is None else self.title.title())
     description: str = (self.description if not self.description is None else "...")
     embed = discord.Embed(
       title=title,
-      description=f"{description}\n\n**✦ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ ・あ・⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ ✦**",
+      description=description,
       colour=0x71368A
     )
     if not self.url is None:
       embed.set_image(url=self.url)
     return embed
-  def edit(self, **kwgs) -> Self:
+  def edit(self, **kwgs) -> Hability:
     data = setDictOptional({}, "name", kwgs.get("name"))
     data = setDictOptional(data, "role", kwgs.get("role"))
     data = setDictOptional(data, "roles", kwgs.get("roles"))
@@ -95,7 +94,12 @@ class Hability:
     if len(embed):
       data["embed"] = embed
     if not len(data):
-      return
+      return self
+    if "role" in data:
+      data["role"] = str((data["role"] if isinstance(data["role"], int) else data["role"].id))
+    if "roles" in data:
+      for i, item in enumerate(data["roles"]):
+        data["roles"][i] = str((item if not isinstance(item, discord.Role) else item.id))
     response = Route.patch(
       f"/desktop/Guilds/{self.ep.id}/Hability/{self.id}",
       data=data,
@@ -107,12 +111,12 @@ class Hability:
       raise ResponseError(f"Failed connection in hability id {self.id} of guild id {self.ep.id}")
     return self
 def New_Hability(
-  Guild: Any,
+  Guild: Guild,
   name: str,
-  role: Union[discord.Role, int]
+  role: discord.Role
 ) -> Hability:
   _name = name.strip().replace(' ', '-')
-  _role = (role if isinstance(role, int) or role is None else role.id)
+  _role = role.id
   
   response = Route.post(
     f"/desktop/Guilds/{Guild.id}/Hability",
@@ -124,8 +128,10 @@ def New_Hability(
       "content-type": "application/json"
     }
   )
-  if not response.status_code == 200:
-    raise HabilityErrors.get(response.json()["message"], Exception)(name)
+  switch = utils.Switch(response.status_code)
+  if not switch(200):  
+    if switch(402): raise HabilityAlreadyExists(utils.get(Guild.habilitys, role__id=role.id))
+    elif switch(404): raise ResponseError(f"failhed connection of guild id {Guild.id}")
   return Hability(
     Guild,
     response.json()

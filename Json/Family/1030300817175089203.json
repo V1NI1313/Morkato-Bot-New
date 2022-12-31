@@ -1,23 +1,473 @@
 [
   {
-    "info": {
-      "name": "tesr",
-      "id": 40882360048153,
-      "role": null,
-      "habilitys": [],
-      "roles": [],
-      "rarity": 0,
-      "require": 1,
-      "limit": null
-    },
-    "content": {
-      "title": null,
-      "description": null
+    "name": "kamado",
+    "id": "67486501787762610",
+    "role": "1032327680558903396",
+    "roles": [
+      "1031641341198864394",
+      "1031641613883146280"
+    ],
+    "habilitys": [
+      "13411040625475",
+      "95323639580465",
+      "892012677139",
+      "43361604805010",
+      "22772028364734",
+      "82179046878909",
+      "80055488205073"
+    ],
+    "rarity": 2,
+    "require": 1,
+    "limit": 5,
+    "embed": {
+      "title": "Kamado",
+      "description": "**─ ﹒Dupla respiração⸝⸝\n─ ﹒Ações repetitivas⸝⸝\n─ ﹒Fio de abertura⸝⸝\n\n─ ﹒Duplo kekkijutsu⸝⸝\n─ ﹒Imunidade ao sol⸝⸝\n─ ﹒Controle da fome⸝⸝\n─ ﹒Reconexão⸝⸝\n\n─ ﹒Presença aterrorizante⸝⸝\n**",
+      "url": "https://media.tenor.com/qwV5FiMzU-EAAAAC/tanjiro-kamado.gif"
     },
     "message": {
-      "content": null,
-      "fileDecoder": 0,
-      "file": null
+      "content": "**\n☀️ »«  [ Família Kamado ]  »« ️☀️\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Dupla respiração\n  - Ações repetitivas\n  - Fio de abertura\n\n__─ ﹒ buffs Oni!⸝⸝__\n\n  - Duplo kekkijutsu\n  - Imunidade ao sol\n  - Controle da fome\n  - Reconexão\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - 13° forma da respiração do sol\n  - Presença aterrorizante\n\n☀️ »«  [ Família Kamado ]  »« ️☀️\n**",
+      "url": "https://media.tenor.com/qwV5FiMzU-EAAAAC/tanjiro-kamado.gif"
+    }
+  },
+  {
+    "name": "agatsuma",
+    "id": "72629892317482320",
+    "role": "1032327681531990106",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "72149753787091",
+      "53389889170995",
+      "18142479837208",
+      "98223187319743"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Agatsuma",
+      "description": "**─ ﹒Combate desacordado⸝⸝\n─ ﹒Fúria eterna⸝⸝\n\n─ ﹒Velocidade aprimorada⸝⸝\n─ ﹒Resistência à veneno⸝⸝\n**",
+      "url": "https://media.tenor.com/MNtqvOEE5Z0AAAAC/zenitsu-zenitsu-agatsuma.gif"
+    },
+    "message": {
+      "content": "**\n🌩️ »«  [ Família Agatsuma ]  »« ️🌩️\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Combate descordado\n  - Fúria eterna\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - 7° da respiração do trovão\n  - Velocidade aprimorada\n  - Resistência à veneno\n\n🌩️ »«  [ Família Agatsuma ]  »« ️🌩️\n**",
+      "url": "https://media.tenor.com/MNtqvOEE5Z0AAAAC/zenitsu-zenitsu-agatsuma.gif"
+    }
+  },
+  {
+    "name": "hashibira",
+    "id": "36717072540274320",
+    "role": "1032327682513457272",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "65841801921980",
+      "13411040625475",
+      "53389889170995",
+      "22248077439622"
+    ],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Hashibira",
+      "description": "**─ ﹒Orgulho inquebrável⸝⸝\n─ ﹒Ações repetitivas⸝⸝\n─ ﹒Fúria eterna⸝⸝\n─ ﹒Prodígio⸝⸝\n\n─ ﹒Força extrema⸝⸝\n**",
+      "url": "https://i.pinimg.com/originals/b6/24/7d/b6247df5b48692e6e7194511b917769c.gif"
+    },
+    "message": {
+      "content": "**\n🐗 »«  [ Família Hashibira ]  »« ️🐗\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Orgulho inquebrável\n  - Ações repetitivas\n  - Fúria eterna\n  - Prodígio\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Força extrema\n\n🐗 »«  [ Família Hashibira ]  »« ️🐗\n**",
+      "url": "https://i.pinimg.com/originals/b6/24/7d/b6247df5b48692e6e7194511b917769c.gif"
+    }
+  },
+  {
+    "name": "tsugari",
+    "id": "68067136887174184",
+    "role": "1032327683633320047",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "95023436002573",
+      "70368071576724",
+      "18142479837208",
+      "98223187319743",
+      "75698462589129"
+    ],
+    "rarity": 2,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Tsugari",
+      "description": "**─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Voz calma⸝⸝\n\n─ ﹒Velocidade aprimorada⸝⸝\n─ ﹒Resistência à veneno⸝⸝\n─ ﹒Paciência eterna⸝⸝**",
+      "url": "https://media.tenor.com/h8kvXLmjXFAAAAAC/kanao-smile.gif"
+    },
+    "message": {
+      "content": "**\n🌹 »«  [ Família Tsuyuri ]  »« ️🌹\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Durabilidade imensa\n  - Voz calma\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - Velocidade aprimorada\n  - Resistência à veneno\n  - Paciência eterna\n\n🌹 »«  [ Família Tsuyuri ]  »« ️🌹\n**",
+      "url": "https://media.tenor.com/h8kvXLmjXFAAAAAC/kanao-smile.gif"
+    }
+  },
+  {
+    "name": "giyu",
+    "id": "56762890654275950",
+    "role": "1032327684782571520",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "95023436002573",
+      "892012677139",
+      "44315575389834",
+      "53389889170995",
+      "75698462589129"
+    ],
+    "rarity": 2,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Giyu",
+      "description": "**─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Fio de abertura⸝⸝\n─ ﹒Reflexos aprimorados⸝⸝\n─ ﹒Fúria eterna⸝⸝\n\n─ ﹒Paciência eterna⸝⸝**",
+      "url": "https://media.tenor.com/Z01gv3sc5GoAAAAC/tomioka-giyuu-demon-slayer.gif"
+    },
+    "message": {
+      "content": "**\n🌊 »«  [ Família Giyu ]  »« ️🌊\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Durabilidade imensa\n  - Fio de abertura\n  - Reflexos aprimorados\n  - Fúria eterna\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - 11° forma da respiração da água\n    - Paciência eterna\n\n🌊 »«  [ Família Giyu ]  »« ️🌊\n**",
+      "url": "https://media.tenor.com/Z01gv3sc5GoAAAAC/tomioka-giyuu-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "kocho",
+    "id": "5680730268552447",
+    "role": "1032327686187659389",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "6931569114538",
+      "98223187319743",
+      "53389889170995"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Kocho",
+      "description": "**─ ﹒Fúria eterna⸝⸝\n\n─ ﹒Agilidade Incomum⸝⸝\n─ ﹒Resistência à veneno⸝⸝**",
+      "url": "https://media.tenor.com/LWfAAmi64nwAAAAd/shinobu-kocho.gif"
+    },
+    "message": {
+      "content": "**\n🦋 »«  [ Família Kochō ]  »« ️🦋\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Fúria eterna\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - Conhecimento básico de veneno\n  - Conhecimento básico de lírios\n  - Agilidade anormal\n  - Resistência à veneno\n\n🦋 »«  [ Família Kochō ]  »« ️🦋\n**",
+      "url": "https://media.tenor.com/LWfAAmi64nwAAAAd/shinobu-kocho.gif"
+    }
+  },
+  {
+    "name": "tengen",
+    "id": "66247370387534320",
+    "role": "1032327686888108084",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "44315575389834",
+      "95023436002573",
+      "85994158442827",
+      "74357143258088",
+      "53389889170995",
+      "1414209053094",
+      "18142479837208"
+    ],
+    "rarity": 3,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Tengen",
+      "description": "**─ ﹒Reflexos aprimorados⸝⸝\n─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Empunhadura dupla⸝⸝\n─ ﹒Ecolocalização⸝⸝\n─ ﹒Fúria eterna⸝⸝\n\n─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Velocidade aprimorada⸝⸝**",
+      "url": "https://media.tenor.com/exA27Cgz1HAAAAAC/tengen-uzui-tengen.gif"
+    },
+    "message": {
+      "content": "**\n🔊 »«  [ Família Tengen ]  »« ️🔊\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Reflexos aprimorados\n  - Durabilidade imensa\n  - Empunhadura dupla\n  - Ecolocalização\n  - Fúria eterna\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Ocultamento de presença\n  - Velocidade aprimorada\n\n🔊 »«  [ Família Tengen ]  »« ️🔊\n**",
+      "url": "https://media.tenor.com/exA27Cgz1HAAAAAC/tengen-uzui-tengen.gif"
+    }
+  },
+  {
+    "name": "iguro",
+    "id": "27158759655796704",
+    "role": "1032327688523890718",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "44315575389834",
+      "74357143258088",
+      "1414209053094",
+      "18142479837208"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Iguro",
+      "description": "**─ ﹒Reflexos aprimorados⸝⸝\n─ ﹒Ecolocalização⸝⸝\n\n─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Velocidade aprimorada⸝⸝**",
+      "url": "https://media.tenor.com/4SQwqGAozUAAAAAd/kimetsu-no-yaiba-demon-slayer.gif"
+    },
+    "message": {
+      "content": "**\n🐍 »«  [ Família Iguro ]  »« ️🐍\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Reflexos aprimorados\n  - Ecolocalização\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Ocultamento de presença\n  - Velocidade aprimorada\n\n🐍 »«  [ Família Iguro ]  »« ️🐍\n**",
+      "url": "https://media.tenor.com/4SQwqGAozUAAAAAd/kimetsu-no-yaiba-demon-slayer.gif"
+    }
+  },
+  {
+    "name": "kanroji",
+    "id": "63187209415453900",
+    "role": "1032327689736040508",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "1414209053094",
+      "15459634917750"
+    ],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Kanroji",
+      "description": "**─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Força extrema⸝⸝**",
+      "url": "https://media.tenor.com/fwQ4SsdANl8AAAAC/mitsuri-kanroji-anime.gif"
+    },
+    "message": {
+      "content": "**\n❤️ »«  [ Família Kanroji ]  »« ️❤️\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Ocultamento de presença\n  - Força extrema\n\n❤️ »«  [ Família Kanroji ]  »« ️❤️\n**",
+      "url": "https://media.tenor.com/fwQ4SsdANl8AAAAC/mitsuri-kanroji-anime.gif"
+    }
+  },
+  {
+    "name": "muichiro",
+    "id": "59275668299603760",
+    "role": "1032327690759442453",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "70368071576724",
+      "22248077439622",
+      "1414209053094",
+      "31415123968791"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Muichiro",
+      "description": "**─ ﹒Voz calma⸝⸝\n─ ﹒Prodígio⸝⸝\n\n─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Mundo transparente⸝⸝**",
+      "url": "https://media.tenor.com/40crhrLz9rQAAAAC/muichiro-tokito-muichiro.gif"
+    },
+    "message": {
+      "content": "**\n💨 »«  [ Família Muichiro ]  »« ️💨\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Voz calma\n  - Prodígio\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - 7° forma da respiração da névoa\n  - Ocultamento de presença\n  - Mundo transparente\n\n💨 »«  [ Família Muichiro ]  »« ️💨\n**",
+      "url": "https://media.tenor.com/40crhrLz9rQAAAAC/muichiro-tokito-muichiro.gif"
+    }
+  },
+  {
+    "name": "himejima",
+    "id": "35213308611451820",
+    "role": "1032327692470734868",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "95023436002573",
+      "13411040625475",
+      "74357143258088",
+      "83644007242997",
+      "1414209053094",
+      "31415123968791"
+    ],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Himejima",
+      "description": "**─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Ações repetitivas⸝⸝\n─ ﹒Ecolocalização⸝⸝\n─ ﹒Carmesim⸝⸝\n\n─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Mundo transparente⸝⸝\n─ ﹒Força extrema⸝⸝**",
+      "url": "https://media.tenor.com/QVPI0YkGf9IAAAAC/dubs-demon.gif"
+    },
+    "message": {
+      "content": "**\n🪨 »«  [ Família Himejima ]  »« ️🪨\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Durabilidade imensa\n  - Ações repetitivas\n  - Ecolocalização\n  - Carmesim\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Ocultamento de presença\n  - Mundo transparente\n  - Força extrema\n\n🪨 »«  [ Família Himejima ]  »« ️🪨\n**",
+      "url": "https://media.tenor.com/QVPI0YkGf9IAAAAC/dubs-demon.gif"
+    }
+  },
+  {
+    "name": "shinazugawa",
+    "id": "45127484114592840",
+    "role": "1032327693154398229",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "95023436002573",
+      "13411040625475",
+      "15459634917750"
+    ],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Shinazugawa",
+      "description": "**─﹒Durabilidade imensa⸝⸝\n─ ﹒Ações repetitivas⸝⸝\n\n─ ﹒Força extrema⸝⸝**",
+      "url": "https://media.tenor.com/uPGoJumDh5cAAAAC/sanemi-shinazugawa.gif"
+    },
+    "message": {
+      "content": "**\n💨 »«  [ Família Shinazugawa ]  »« ️💨\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Durabilidade imensa\n  - Ações repetitivas\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Força extrema\n\n💨 »«  [ Família Shinazugawa ]  »« ️💨\n**",
+      "url": "https://media.tenor.com/uPGoJumDh5cAAAAC/sanemi-shinazugawa.gif"
+    }
+  },
+  {
+    "name": "sakonji",
+    "id": "28490249873096940",
+    "role": "1032327694685310987",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "95023436002573",
+      "72980693947456",
+      "70368071576724",
+      "1414209053094",
+      "18142479837208",
+      "15459634917750"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Sakonji",
+      "description": "**─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Resistência imensa⸝⸝\n─ ﹒Voz calma⸝⸝\n\n─ ﹒Ocultamento de presença⸝⸝\n─ ﹒Velocidade aprimorada⸝⸝\n─ ﹒Força extrema⸝⸝**",
+      "url": "https://media.tenor.com/NeJAU6dAcRAAAAAd/urokodaki.gif"
+    },
+    "message": {
+      "content": "**\n🌊 »«  [ Família Sakonji ]  »« ️🌊\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Durabilidade Imensa\n  - Resistência Imensa\n  - Voz calma\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - Ocultamento de presença\n  - Velocidade aprimorada\n  - Força extrema\n\n🌊 »«  [ Família Sakonji ]  »« ️🌊\n**",
+      "url": "https://media.tenor.com/NeJAU6dAcRAAAAAd/urokodaki.gif"
+    }
+  },
+  {
+    "name": "jigoro",
+    "id": "80545973282170240",
+    "role": "1032329248792383548",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "13411040625475",
+      "70368071576724",
+      "18142479837208"
+    ],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Jigoro",
+      "description": "**─ ﹒Ações repetitivas⸝⸝\n─ ﹒Voz calma⸝⸝\n\n─ ﹒Velocidade aprimorada⸝⸝**",
+      "url": "https://64.media.tumblr.com/7713a7448f07a324627bffbc074b15f4/fc19bcec695b05d9-31/s540x810/01d1c5a930881d226a40a09f73369ec95861b93f.gif"
+    },
+    "message": {
+      "content": "**\n🌩️ »«  [ Família Jigoro ]  »« ️🌩️\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Ações repetitivas\n  - Voz Calma\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - Velocidade aprimorada\n\n🌩️ »«  [ Família Jigoro ]  »« ️🌩️\n**",
+      "url": "https://64.media.tumblr.com/7713a7448f07a324627bffbc074b15f4/fc19bcec695b05d9-31/s540x810/01d1c5a930881d226a40a09f73369ec95861b93f.gif"
+    }
+  },
+  {
+    "name": "kagaya",
+    "id": "50847995512271260",
+    "role": "1032329249996152842",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "66965853452355",
+      "70368071576724"
+    ],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Kagaya",
+      "description": "**─ ﹒Voz calma⸝⸝\n─ ﹒Mão suporte⸝⸝**",
+      "url": "https://media.tenor.com/TcTy_2TqTukAAAAd/demon-slayer.gif"
+    },
+    "message": {
+      "content": "**\n🌕 »«  [ Família Kagaya ]  »« ️🌕\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Mão suporte\n  - Voz calma\n\n🌕 »«  [ Família Kagaya ]  »« ️🌕\n**",
+      "url": "https://media.tenor.com/TcTy_2TqTukAAAAd/demon-slayer.gif"
+    }
+  },
+  {
+    "name": "kanzaki",
+    "id": "39928581294699650",
+    "role": "1032329252495953930",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [],
+    "rarity": 1,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Kanzaki",
+      "description": "**─ ﹒Resistência imensa⸝⸝\n\n─ ﹒Velocidade aprimorada⸝⸝**",
+      "url": "https://media.tenor.com/t61s6eT3YwoAAAAC/aoi-kanzaki-aoi.gif"
+    },
+    "message": {
+      "content": "**\n💢 »«  [ Família Kanzaki]  »« ️💢\n\n─ ﹒ buffs Humano!⸝⸝\n\n  - Resistência imensa\n\n─ ﹒ buffs Gerais!⸝⸝\n\n  - Acesso ao Conhecimento básico sobre venenos\n  - Velocidade aprimorada\n\n💢 »«  [ Família Kanzaki ]  »« ️💢\n**",
+      "url": "https://media.tenor.com/t61s6eT3YwoAAAAC/aoi-kanzaki-aoi.gif"
+    }
+  },
+  {
+    "name": "tsugikuni",
+    "id": "95803964946800880",
+    "role": "1032329253645201548",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [
+      "42678406342320",
+      "44315575389834",
+      "95023436002573",
+      "13411040625475",
+      "53389889170995",
+      "83644007242997",
+      "22248077439622",
+      "18142479837208",
+      "80055488205073",
+      "31415123968791",
+      "1414209053094"
+    ],
+    "rarity": 3,
+    "require": 1,
+    "limit": 1,
+    "embed": {
+      "title": "Tsugikuni",
+      "description": "**─ ﹒Cinco sentidos apurados⸝⸝\n─ ﹒Reflexos aprimorados⸝⸝\n─ ﹒Durabilidade imensa⸝⸝\n─ ﹒Ações repetitivas⸝⸝\n─ ﹒Fúria eterna⸝⸝\n─ ﹒Carmesim⸝⸝\n─ ﹒Prodígio⸝⸝\n\n─ ﹒Velocidade aprimorada⸝⸝\n─ ﹒Presença aterrorizante⸝⸝\n─ ﹒Mundo transparente⸝⸝\n─ ﹒Ocultamento de presença⸝⸝**",
+      "url": "https://media.tenor.com/Q4Yyl95-OBgAAAAd/yoriichi-demon-slayer-yoriichi-tsugikuni.gif"
+    },
+    "message": {
+      "content": "**\n🌑 »«  [ Família Tsugikuni ]  »« ️🌑\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Cinco sentidos apurados\n  - Reflexos aprimorados\n  - Durabilidade imensa\n  - Ações repetitivas\n  - Fúria eterna\n  - Carmesim\n  - Prodígio\n\n__─ ﹒ buffs Gerais!⸝⸝__\n \n  - Velocidade aprimorada\n  - Presença aterrorizante\n  - Mundo transparente\n  - Ocultamento de presença\n\n🌑 »«  [ Família Tsugikuni ]  »« ️🌑\n**",
+      "url": "https://media.tenor.com/Q4Yyl95-OBgAAAAd/yoriichi-demon-slayer-yoriichi-tsugikuni.gif"
+    }
+  },
+  {
+    "name": "kyojuro",
+    "id": "85348323408134780",
+    "role": "1037422148316303371",
+    "roles": [
+      "1031641341198864394"
+    ],
+    "habilitys": [],
+    "rarity": 0,
+    "require": 1,
+    "limit": null,
+    "embed": {
+      "title": "Kyojuro",
+      "description": "**─ ﹒Reflexos aprimorados⸝⸝\n─ ﹒Orgulho inquebrável⸝⸝\n─ ﹒Fúria eterna⸝⸝**",
+      "url": "https://media.tenor.com/jvbPYIiSRr4AAAAC/rengoku-kyojuro.gif"
+    },
+    "message": {
+      "content": "**\n🔥 »«  [ Família Kyojuro ]  »« ️🔥\n\n__─ ﹒ buffs Humano!⸝⸝__\n  \n  - Reflexos aprimorados\n  - Fúria eterna\n\n__─ ﹒ buffs Gerais!⸝⸝__\n  \n  - 9° forma da respiração das chamas\n\n🔥 »«  [ Família Kyojuro ]  »« ️🔥\n**",
+      "url": "https://media.tenor.com/jvbPYIiSRr4AAAAC/rengoku-kyojuro.gif"
     }
   }
 ]

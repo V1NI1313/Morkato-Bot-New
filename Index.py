@@ -27,6 +27,7 @@ class MyBot(commands.Bot):
     if isinstance(err, commands.CommandNotFound): return
     if not err.original is None:
       await ctx.reply(f"**O comando `!{command.name}` invocou o erro `{type(err.original).__name__}`**")
+      raise err
   async def setup_hook(self) -> None:
   #   for i in os.listdir("./Slash Commands"):
   #     if i.endswith('.py'):
@@ -47,6 +48,6 @@ class MyBot(commands.Bot):
       setup = getattr(module, "setup", DicordMethods.setup)
       await setup(message.channel)
     await self.process_commands(message)
-TOKEN: str = config("TOKEN-MORKATO-BOT")
+TOKEN: str = config("TOKEN")
 bot = MyBot()
 bot.run(TOKEN)

@@ -1,15 +1,39 @@
 [
   {
-    "breed": null,
+    "breed": 1,
     "id": "510948690354110464",
     "rolls": {
+      "hability": {
+        "choice": 4,
+        "inventory": {
+          "97076460061365": 1
+        }
+      },
       "family": {
-        "choice": 3,
-        "inventory": {}
+        "choice": 0,
+        "inventory": {
+          "85348323408134780": 1,
+          "45127484114592840": 1,
+          "35213308611451820": 1
+        }
+      }
+    }
+  },
+  {
+    "breed": 2,
+    "id": "973758943044194324",
+    "rolls": {
+      "family": {
+        "choice": 2,
+        "inventory": {
+          "36717072540274320": 1
+        }
       },
       "hability": {
-        "choice": 5,
-        "inventory": {}
+        "choice": 4,
+        "inventory": {
+          "75698462589129": 1
+        }
       }
     }
   }
