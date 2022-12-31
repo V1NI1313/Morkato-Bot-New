@@ -34,7 +34,7 @@ const app = express();
 const route = Router()
 
 const headers = {
-  'authorization': "Bot OTcyMTkzOTEzOTgzMTAzMDU2.Ggiluu.pHTjdOmlXmk8qRye0U1tZZyGMJDmmSAMGfh1Qs"
+  'authorization': "Bot abcdefg..."
 }
 
 app.use(express.json())
